@@ -1,7 +1,7 @@
 
 import './favicon.ico'
 
-import App from './components/App.svt'
+import App from './components/App.svelt'
 
 const app = new App({
   target: global.document.getElementById('main'),

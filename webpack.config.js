@@ -15,7 +15,7 @@ module.exports = {
   module: {
     rules: [
       { test: /\.js$/, exclude: /node_modules/, use: 'babel-loader' },
-      { test: /\.svelt/, use: require.resolve('./svelte-loader') },
+      { test: /\.svelte/, use: require.resolve('./svelte-loader') },
       // TODO: perform image-webpack optimizations
       { test: /\.(jpg|png|gif|ico)$/, use: 'file-loader' },
     ],

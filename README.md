@@ -1,6 +1,6 @@
 # Willowy
 
-Setting up a playground for [Svlete](https://svelte.technology/) using
+Setting up a playground for [Svelte](https://svelte.technology/) using
 Webpack.
 
 ## Getting Started

@@ -1,6 +1,7 @@
 const path = require('path');
-const svelte = require('svelte');
 const debug = require('debug')('svelte-loader');
+
+const svelte = require('./svelte');
 
 function getFormat(target) {
   if (target === 'web') {

@@ -5,6 +5,8 @@ module.exports = {
     node: true,
   },
   rules: {
-    semi: [0, 'always'],
+    'comma-dangle': [2, 'never'],
+    semi: [2, 'always'],
+    'import/no-extraneous-dependencies': [2, { devDependencies: true }],
   },
 };

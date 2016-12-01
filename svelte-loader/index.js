@@ -22,13 +22,19 @@ module.exports = function svelteLoader(source) {
     // filename,
     format,
     name,
-    onerror: function(err) {
-      this.emitError(err.string);
+    onerror: function onErrorCallback(err) {
+      this.emitError(err.message);
     }.bind(this),
-    onwarning: function(warn) {
-      this.emitWarn(warn.string);
-    }.bind(this),
+    onwarning: function onWarningCallback(warn) {
+      this.emitWarn(warn.message);
+    }.bind(this)
   });
 
-  callback(null, result.code, result.map);
+  const code = result.code.replace(
+    'var mainFragment =',
+    `
+      console.log(options);
+      var mainFragment =`
+    );
+  callback(null, code, result.map);
 };

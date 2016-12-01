@@ -1,0 +1,1 @@
+<li>{{slinky.title}}</li>

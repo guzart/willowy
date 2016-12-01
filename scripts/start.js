@@ -21,14 +21,13 @@ function log(...messages) {
   console.log(...messages); // eslint-disable-line no-console
 }
 
-
 // Enable HMR
 
 config.entry = [
   `webpack-dev-server/client?${publicPath}/`,
-  // 'webpack/hot/only-dev-server',
-  'webpack/hot/dev-server',
-  config.entry,
+  'webpack/hot/only-dev-server',
+  // 'webpack/hot/dev-server',
+  config.entry
 ];
 config.plugins.push(new webpack.HotModuleReplacementPlugin());
 
@@ -40,11 +39,11 @@ const devServer = new WebpackDevServer(compiler, {
   publicPath,
   quiet: true,
   watchOptions: {
-    ignored: /node_modules/,
+    ignored: /node_modules/
   },
   https: protocol === 'https',
   historyApiFallback: true,
-  host,
+  host
 });
 
 devServer.listen(port, (err/* , result*/) => {

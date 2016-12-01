@@ -18,18 +18,18 @@
   },
   "homepage": "https://github.com/guzart/willowy#readme",
   "dependencies": {
-    "chalk": "^1.1.3"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.8",
     "babel-preset-es2015": "^6.18.0",
+    "chalk": "^1.1.3",
     "eslint": "^3.11.1",
     "eslint-config-airbnb-base": "^10.0.1",
     "eslint-plugin-import": "^2.2.0",
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.24.1",
-    "svelte": "guzart/svelte#a55b237",
+    "svelte": "^1.0.4",
     "webpack": "2.1.0-beta.27",
     "webpack-dev-server": "2.1.0-beta.12"
   }

@@ -3,10 +3,10 @@ import './favicon.ico'
 
 import App from './components/App.svelte'
 
-global.hotify = (instance, target, Component) => {
+global.hotify = (instance, options, Component) => {
   const data = instance.get()
   instance.teardown()
-  return new Component({ target, data })
+  return new Component(Object.assign({}, options, { data }))
 }
 
 

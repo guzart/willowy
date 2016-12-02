@@ -9,6 +9,7 @@
     />
   </div>
   <button type="submit">Add Now</button>
+  <button type="button" on:click="logState()">Log</button>
 </form>
 
 <script>
@@ -20,6 +21,10 @@
     data: () => defaultData,
 
     methods: {
+      logState() {
+        console.log(this.get())
+      },
+
       createHandler(event) {
         event.preventDefault()
         // parse, validate, fire, reset

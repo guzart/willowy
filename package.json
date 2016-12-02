@@ -17,8 +17,7 @@
     "url": "https://github.com/guzart/willowy/issues"
   },
   "homepage": "https://github.com/guzart/willowy#readme",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.8",
@@ -29,7 +28,7 @@
     "eslint-plugin-import": "^2.2.0",
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.24.1",
-    "svelte": "^1.0.4",
+    "svelte": "^1.0.5",
     "webpack": "2.1.0-beta.27",
     "webpack-dev-server": "2.1.0-beta.12"
   }

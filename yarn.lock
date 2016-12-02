@@ -3164,9 +3164,9 @@ supports-color@^3.1.0, supports-color@^3.1.1:
   dependencies:
     has-flag "^1.0.0"
 
-svelte@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-1.0.4.tgz#dad0c0c5167ad4b9417c034107a0371fc959bbef"
+svelte@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-1.0.5.tgz#3a31504d069e1f969de3d4a5dcc7ef5cb2b15336"
 
 table@^3.7.8:
   version "3.8.3"

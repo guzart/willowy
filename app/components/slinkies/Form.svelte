@@ -8,7 +8,7 @@
       type="text"
     />
   </div>
-  <button type="submit">Add</button>
+  <button type="submit">Add Now</button>
 </form>
 
 <script>

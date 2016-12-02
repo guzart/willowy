@@ -8,11 +8,7 @@
   import Slinkies from './slinkies/Index.svelte'
 
   export default {
-    data() {
-      return {
-        user: { name: 'Anonymous' },
-      }
-    },
+    data: () => ({ user: { name: 'Anonymous' } }),
 
     components: {
       Slinkies,

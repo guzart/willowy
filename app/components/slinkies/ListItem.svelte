@@ -1,1 +1,1 @@
-<li>{{slinky.title}}</li>
+<li>{{slinky.title}}.</li>

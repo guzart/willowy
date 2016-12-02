@@ -3,17 +3,20 @@ import './favicon.ico'
 
 import App from './components/App.svelte'
 
+global.hotify = (instance, target, Component) => {
+  const data = instance.get()
+  instance.teardown()
+  return new Component({ target, data })
+}
+
+
 const target = global.document.getElementById('main')
 const data = { user: { name: 'everybody' } }
-let app = new App({ target, data })
+let app = new App({ data, target })
 
 if (module.hot) {
   module.hot.accept('./components/App.svelte', () => {
-    const state = app.get()
-    app.teardown()
-
-    const NextApp = require('./components/App.svelte')
-    app = new NextApp({ target, data: state })
+    app = global.hotify(app, target, require('./components/App.svelte')) // eslint-disable-line global-require
   })
 }
 

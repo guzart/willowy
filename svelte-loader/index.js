@@ -2,6 +2,25 @@ const path = require('path');
 const svelte = require('svelte');
 // const debug = require('debug')('svelte-loader');
 
+// TODO: Some elements depend on the order in which they are bound,
+// so reinitializing the instance only will append to the parent and lose their position
+//
+// A better approach might be to:
+// 1. module.hot.accept all dependencies listed in { components: ... }
+// 2. patch template.components.Component = require('...') and
+// 3. teardown only the mainFragment
+// 4. trigger a mainFragment = renderMainFragment(root, component, target)
+//
+// but we still need a way to store/restore the children state that are created inside
+// renderMainFragment
+//
+// after each component instance initialization we could:
+// 1. call an init method that uses the variable name as the id
+//    _hmr_.init(component, 'eachBlock_0', index, 'newForm', newForm)
+// 2. when tearing down mainFragment, set a var on template._hmr_teardown_ = true
+// 3. call a save method when attempting to teardown and template._hmr_teardown_ == true
+//    _hmr_.save(component, 'eachBlock_0', index, 'newForm', newForm.get())
+
 function hotTemplate(libPath, name, options) {
   return `
     if (module.hot) {
